@@ -1,0 +1,6 @@
+category: Audio
+requires: libmpdclient2
+external-source: libmpdclient
+sdesc: "Music Player Daemon client library (development)"
+ldesc: "A stable, asynchronous API for interfacing with the Music 
+Player Daemon."

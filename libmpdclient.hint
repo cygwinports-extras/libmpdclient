@@ -1,0 +1,4 @@
+category: Audio
+sdesc: "Music Player Daemon client library (sources)"
+ldesc: "A stable, asynchronous API for interfacing with the Music 
+Player Daemon."
