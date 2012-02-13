@@ -5,3 +5,5 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.bz2"
 PKG_NAMES="${PN}2 ${PN}-devel"
 libmpdclient2_CONTENTS="--exclude=html usr/bin/cygmpdclient-2.dll usr/share/doc/"
 libmpdclient_devel_CONTENTS="usr/include/ usr/lib/ usr/share/doc/${PN}/html/"
+
+KEEP_LA_FILES="none"
