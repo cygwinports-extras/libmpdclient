@@ -1,0 +1,16 @@
+NAME="libmpdclient"
+VERSION=2.7
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Music Player Daemon client library"
+DESCRIPTION="A stable, asynchronous API for interfacing with the Music
+Player Daemon."
+HOMEPAGE="http://www.musicpd.org/"
+SRC_URI="http://www.musicpd.org/download/libmpdclient/2/${NAME}-${VERSION}.tar.bz2"
+
+PKG_NAMES="${NAME}2 ${NAME}-devel"
+libmpdclient2_REQUIRES="mpd"
+libmpdclient2_CONTENTS="--exclude=html usr/bin/cygmpdclient-2.dll usr/share/doc/"
+libmpdclient_devel_CONTENTS="usr/include/ usr/lib/ usr/share/doc/${NAME}/html/"
+
+KEEP_LA_FILES="none"
