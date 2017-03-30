@@ -1,5 +1,5 @@
 NAME="libmpdclient"
-VERSION=2.10
+VERSION=2.11
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Music Player Daemon client library"
@@ -8,10 +8,13 @@ Player Daemon."
 HOMEPAGE="http://www.musicpd.org/"
 SRC_URI="http://www.musicpd.org/download/libmpdclient/2/${NAME}-${VERSION}.tar.xz"
 
-PKG_NAMES="${NAME}2 ${NAME}-devel vala-${NAME}"
-libmpdclient2_REQUIRES="mpd"
+PKG_NAMES="${NAME}2 ${NAME}-devel ${NAME}-doc vala-${NAME}"
+#libmpdclient2_REQUIRES="mpd" # can be used remotely
 libmpdclient2_CONTENTS="--exclude=html usr/bin/cygmpdclient-2.dll usr/share/doc/"
-libmpdclient_devel_CONTENTS="usr/include/ usr/lib/ usr/share/doc/${NAME}/html/"
+libmpdclient_devel_CONTENTS="usr/include/ usr/lib/"
+libmpdclient_doc_CATEGORY="Doc"
+libmpdclient_doc_CONTENTS="usr/share/doc/${NAME}/html/"
 vala_libmpdclient_CONTENTS="usr/share/vala/vapi/libmpdclient.*"
 
-KEEP_LA_FILES="none"
+# only seems to make sense if mpd is run as a system daemon
+CYGCONF_ARGS="--without-default-socket"
