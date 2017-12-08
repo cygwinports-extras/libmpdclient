@@ -1,5 +1,7 @@
+inherit meson
+
 NAME="libmpdclient"
-VERSION=2.11
+VERSION=2.13
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Music Player Daemon client library"
@@ -16,5 +18,4 @@ libmpdclient_doc_CATEGORY="Doc"
 libmpdclient_doc_CONTENTS="usr/share/doc/${NAME}/html/"
 vala_libmpdclient_CONTENTS="usr/share/vala/vapi/libmpdclient.*"
 
-# only seems to make sense if mpd is run as a system daemon
-CYGCONF_ARGS="--without-default-socket"
+CYGMESON_ARGS="-Ddocumentation=true -Dtest=true"
